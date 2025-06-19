@@ -1,4 +1,4 @@
-# Mesafe Kontrollü LED Sistemi (3 Saniye Kuralı)
+# Mesafe Kontrollü LED Sistemi (0.5 Saniye Kuralı)
 
 Bu projede HC-SR04 ultrasonik sensörü kullanılarak 15-25 cm aralığında bir cisim 0.5 saniye boyunca sabit tutulduğunda LED'in yanması sağlanır.
 
