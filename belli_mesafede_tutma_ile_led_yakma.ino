@@ -21,20 +21,20 @@ void loop() {
   digitalWrite(trig,HIGH);
   delayMicroseconds(10);
   digitalWrite(trig,LOW);
-  sure=pulseIn(echo,HIGH);
-  mesafe=0.034*sure/2;
+  sure=pulseIn(echo,HIGH);//sinyalin trig pinden echo pinine gelene kadarki suresi
+  mesafe=0.034*sure/2;//mesafeyi hesaplıyoruz
   Serial.print("mesafe=");
   Serial.println(mesafe);
   Serial.print("durdugu sure");
   Serial.println(millis() - ilksure);
   delay(1000);
 
-if(mesafe>15&& mesafe<25){
+if(mesafe>15&& mesafe<25){ //hangi mesafe aralığında olduğunu belirtiyoruz
   if(!icindemi){
 icindemi=true;
   ilksure=millis();
   }
-  if(millis()-ilksure>=500){
+  if(millis()-ilksure>=500){//kac saniye tutulmasını gerektiğini belirtiyoruz 
   digitalWrite(led,HIGH);
 
   }
@@ -44,5 +44,4 @@ digitalWrite(led,LOW);
   icindemi = false;
 }
   
-
 }
